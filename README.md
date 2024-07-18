@@ -1,3 +1,6 @@
+
+<img width="1780" alt="Screenshot 2024-07-18 at 12 29 08" src="https://github.com/user-attachments/assets/08abfdba-8444-4700-b61c-d8f23d77e069">
+
 # next-template
 
 A Next.js 13 template for building apps with Radix UI and Tailwind CSS.
