@@ -1,5 +1,5 @@
 
-<img width="1780" alt="Screenshot 2024-07-18 at 12 29 08" src="https://github.com/user-attachments/assets/08abfdba-8444-4700-b61c-d8f23d77e069">
+<img width="1780" alt="Screenshot 2024-07-18 at 13 26 35" src="https://github.com/user-attachments/assets/1da740ab-f896-451c-86af-3278630806a5">
 
 # next-template
 
