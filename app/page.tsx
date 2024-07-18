@@ -2,38 +2,39 @@ import Link from "next/link"
 
 import { siteConfig } from "@/config/site"
 import { buttonVariants } from "@/components/ui/button"
+import DailyVisitors from "@/components/daily-visitors/DailyVisitors"
+import { ExampleChart } from "@/components/daily-visitors/sample-chart"
+import MetricSummary from "@/components/metric-summary/MetricSummary"
+import Sidebar from "@/components/sidebar/Sidebar"
+import SocialMedia from "@/components/social-media/SocialMedia"
+import VisitedPages from "@/components/visited-pages/VisitedPages"
 
 export default function IndexPage() {
   return (
-    <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
-      <div className="flex max-w-[980px] flex-col items-start gap-2">
-        <h1 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl">
-          Beautifully designed components <br className="hidden sm:inline" />
-          built with Radix UI and Tailwind CSS.
-        </h1>
-        <p className="max-w-[700px] text-lg text-muted-foreground">
-          Accessible and customizable components that you can copy and paste
-          into your apps. Free. Open Source. And Next.js 13 Ready.
-        </p>
+    <div className="d-flex justify-content-between p-6 ">
+      <div className="grid grid-cols-12 gap-4">
+        {/** Left Section */}
+        <div className=" col-span-full lg:col-span-3">
+          {" "}
+          <Sidebar></Sidebar>{" "}
+        </div>
+
+        {/** Right Section */}
+        <div className="space-y-4 col-span-full lg:col-span-9 ">
+          <DailyVisitors />
+          <MetricSummary />
+
+          <div className="grid grid-cols-12 gap-4">
+            <div className=" col-span-full lg:col-span-8">
+              <VisitedPages />
+            </div>
+            <div className="col-span-full lg:col-span-4">
+              {" "}
+              <SocialMedia />{" "}
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="flex gap-4">
-        <Link
-          href={siteConfig.links.docs}
-          target="_blank"
-          rel="noreferrer"
-          className={buttonVariants()}
-        >
-          Documentation
-        </Link>
-        <Link
-          target="_blank"
-          rel="noreferrer"
-          href={siteConfig.links.github}
-          className={buttonVariants({ variant: "outline" })}
-        >
-          GitHub
-        </Link>
-      </div>
-    </section>
+    </div>
   )
 }
